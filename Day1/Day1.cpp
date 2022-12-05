@@ -30,7 +30,6 @@ namespace AoC2022
   bool Day1::PrepareInputData()
   {
     bool inputParsed = false;
-    std::uint16_t lineNum = 1;
     if (_inputFile)
     {
       std::string line = "";
@@ -47,7 +46,6 @@ namespace AoC2022
         {
           _inputData.push_back(DISTINGUISHING_ELFS_VALUE);
         }
-        lineNum++;
       }
       _inputFile.close();
       inputParsed = true;

@@ -115,5 +115,4 @@ namespace AoC2022
       }
     }
   }
-
 }

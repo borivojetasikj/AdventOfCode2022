@@ -2,25 +2,25 @@
 
 namespace AoC2022
 {
-	Day2::Day2():
+  Day2::Day2():
     _inputFile{ "input.txt", std::ios_base::in },
     _inputDataReady{ false }
-	{
+  {
     if (PrepareInputData())
     {
       _inputDataReady = true;
     }
-	}
+  }
 
-	void Day2::SolvePuzzles()
-	{
+  void Day2::SolvePuzzles()
+  {
     std::cout << "[Day 2] ";
     Puzzle1Solver();
     Puzzle2Solver();
-	}
+  }
 
-	bool Day2::PrepareInputData()
-	{
+  bool Day2::PrepareInputData()
+  {
     bool inputParsed = false;
     if (_inputFile)
     {
@@ -38,10 +38,10 @@ namespace AoC2022
       inputParsed = true;
     }
     return inputParsed;
-	}
+  }
 
-	void Day2::Puzzle1Solver()
-	{
+  void Day2::Puzzle1Solver()
+  {
     std::uint32_t totalScore = 0;
     for (auto round : _inputData)
     {
@@ -51,10 +51,10 @@ namespace AoC2022
       }
     }
     std::cout << "Game 1: Total score = " << totalScore << std::endl;
-	}
-
-	void Day2::Puzzle2Solver()
-	{
+  }
+  
+  void Day2::Puzzle2Solver()
+  {
     std::uint32_t totalScore = 0;
     for (auto round : _inputData)
     {
@@ -64,7 +64,7 @@ namespace AoC2022
       }
     }
     std::cout << "\tGame 2: Total score = " << totalScore << std::endl;
-	}
+  }
 
   std::uint8_t Day2::FindShapeScore(const char shapeChar)
   {
